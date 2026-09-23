@@ -388,16 +388,15 @@
     let uploadedBase64Image = "";
 
     const defaultProjects = [
-      { title: "sonidos interactivos", link: "https://ambrosiovaldesbw.github.io/idiomass/", image: "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=900&q=80", description: "" },
-      { title: "sonificacion", link: "https://ambrosiovaldesbw.github.io/sonificacion/", image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=80", description: "" },
-      { title: "lamina de productos", link: "https://github.com/ambrosiovaldesbw/lamina-productos/blob/main/ChatGPT%20Image%2025%20ago%202026,%2011_04_53%20a.m..png?raw=true", image: "https://github.com/ambrosiovaldesbw/lamina-productos/blob/main/ChatGPT%20Image%2025%20ago%202026,%2011_04_53%20a.m..png?raw=true", description: "" },
-      { title: "Control Sonoro en Max/MSP", link: "https://youtu.be/WUQkYx2NCNk", image: "https://img.youtube.com/vi/WUQkYx2NCNk/hqdefault.jpg", description: "" }
+      { title: "sonidos interactivos", link: "https://ambrosiovaldesbw.github.io/idiomass/", image: "imagenes/banderas.jpg", description: "" },
+      { title: "sonificacion", link: "https://ambrosiovaldesbw.github.io/sonificacion/", image: "imagenes/sonificador.jpg", description: "" },
+      { title: "lamina de productos", link: "https://github.com/ambrosiovaldesbw/lamina-productos/blob/main/ChatGPT%20Image%2025%20ago%202026,%2011_04_53%20a.m..png?raw=true", image: "imagenes/lightbulbb.jpg", description: "" },
+      { title: "Control Sonoro en Max/MSP", link: "https://youtu.be/WU0kYx2NCNk", image: "imagenes/max9.jpg", description: "" }
     ];
 
     // Los proyectos públicos vienen incluidos en el HTML.
     // localStorage solo se usa para cambios hechos desde este navegador.
-    let savedProjects = JSON.parse(localStorage.getItem('ambrosio_projects_v3'));
-    let projects = savedProjects && savedProjects.length ? savedProjects : defaultProjects.map(p => ({...p}));
+    let projects = defaultProjects.map(p => ({...p}));
 
     function renderProjects() {
       container.innerHTML = '';
